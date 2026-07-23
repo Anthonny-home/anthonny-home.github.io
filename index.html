@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HomeEssentials – Best Home & Kitchen Products on Amazon</title>
+<meta name="description" content="We test and review the best home and kitchen products on Amazon so you don't have to. Honest picks, real reviews.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #FAF8F5; --warm-white: #FFFFFF; --charcoal: #1C1C1C;
+    --mid: #6B6B6B; --light: #B0A99A; --accent: #C17A3B;
+    --accent-light: #F5EAD9; --border: #E8E3DC; --font: 'Segoe UI', system-ui, sans-serif;
+  }
+  *, body { font-family: var(--font); background: var(--cream); color: var(--charcoal); line-height: 1.6; }
+  nav { background: var(--warm-white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.03em; color: var(--charcoal); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  nav ul { list-style: none; display: flex; gap: 2rem; }
+  nav ul a { text-decoration: none; font-size: 0.85rem; color: var(--mid); transition: color 0.2s; }
+  nav ul a:hover { color: var(--charcoal); }
+  .nav-cta { background: var(--charcoal); color: var(--warm-white) !important; padding: 0.55rem 1.2rem; border-radius: 24px; font-size: 0.82rem !important; box-shadow: 0 2px 8px rgba(0,0,0,0.12); transition: transform 0.2s, box-shadow 0.2s; }
+  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.18); }
+  .hero { background: transparent; border-bottom: none; padding: 5rem 1.5rem 4rem; text-align: center; max-width: 760px; margin: 0 auto; }
+  .hero-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 20px; margin-bottom: 1.5rem; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1.15; margin-bottom: 1.2rem; }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p { font-size: 1.05rem; color: var(--mid); max-width: 520px; margin: 0 auto 2rem; }
+  .hero-buttons { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--charcoal); color: var(--warm-white); padding: 0.9rem 2rem; border-radius: 30px; font-size: 0.9rem; font-weight: 600; text-decoration: none; box-shadow: 0 4px 14px rgba(28,28,28,0.2); transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s; display: inline-block; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(28,28,28,0.28); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary { border: 1.5px solid var(--border); color: var(--charcoal); padding: 0.9rem 2rem; border-radius: 30px; font-size: 0.9rem; font-weight: 600; text-decoration: none; background: var(--warm-white); transition: all 0.2s ease; display: inline-block; }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); transform: translateY(-2px); }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+  .section-header { text-align: center; padding: 3.5rem 0 2rem; }
+  .section-header h2 { font-size: 1.7rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+  .section-header p { color: var(--mid); font-size: 0.95rem; }
+  .grandma-divider { display: flex; justify-content: center; align-items: center; padding: 0.4rem 0; }
+  .grandma-divider svg { display: block; }
+  .heading-sprig { width: 20px; height: 20px; flex-shrink: 0; }
+  .heading-with-sprigs { display: flex; align-items: center; justify-content: center; gap: 0.7rem; }
+  .categories { background: var(--warm-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 2.5rem 0; }
+  .category-toggle { display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; background: none; border: none; cursor: pointer; padding: 0.4rem 0 0.9rem; text-align: center; font-size: 0.8rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; }
+  .category-toggle .category-toggle-icon { font-size: 0.9rem; transition: transform 0.3s; }
+  .category-toggle.active .category-toggle-icon { transform: rotate(180deg); }
+  .category-collapse { display: none; }
+  .category-collapse.open { display: block; }
+  .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
+  .category-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+  .category-main-btn { background: var(--warm-white); border: 1.5px solid var(--accent); color: var(--accent); padding: 0.65rem 1.5rem; border-radius: 25px; font-size: 0.85rem; font-weight: 600; text-decoration: none; box-shadow: 0 2px 6px rgba(193,122,59,0.12); transition: all 0.2s ease; display: inline-block; }
+  .category-main-btn:hover { background: var(--accent); color: var(--warm-white); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(193,122,59,0.3); }
+  .category-card { background: var(--cream); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1rem; text-align: center; text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.15s; display: block; }
+  .category-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .category-icon { font-size: 1.8rem; margin-bottom: 0.6rem; display: block; }
+  .category-card h3 { font-size: 0.85rem; font-weight: 600; }
+  .category-card span { font-size: 0.75rem; color: var(--mid); }
+  .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem; }
+  .filter-btn { background: var(--warm-white); border: 1px solid var(--border); color: var(--mid); padding: 0.5rem 1.2rem; border-radius: 20px; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
+  .filter-btn.active, .filter-btn:hover { background: var(--charcoal); color: var(--warm-white); border-color: var(--charcoal); transform: translateY(-1px); box-shadow: 0 4px 10px rgba(28,28,28,0.2); }
+  .product-grid { display: flex; flex-direction: row; gap: 1.2rem; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 0.3rem 0.3rem 1.1rem; scrollbar-width: thin; scrollbar-color: var(--accent) var(--cream); }
+  .product-grid::-webkit-scrollbar { height: 6px; }
+  .product-grid::-webkit-scrollbar-track { background: var(--cream); border-radius: 10px; }
+  .product-grid::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+  .product-card { flex: 0 0 auto; width: 260px; scroll-snap-align: start; background: var(--warm-white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: box-shadow 0.2s, transform 0.15s; display: flex; flex-direction: column; }
+  .product-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-2px); }
+  .product-card.product-highlight { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(193,122,59,0.35), 0 8px 24px rgba(193,122,59,0.2); }
+  .product-img { background: var(--cream); height: 180px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+  .badge { position: absolute; top: 10px; left: 10px; font-size: 0.7rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .badge-top { background: var(--charcoal); color: #fff; }
+  .badge-sale { background: #E85C3A; color: #fff; }
+  .badge-new { background: var(--accent); color: #fff; }
+  .product-info { padding: 1rem 1.1rem 1.3rem; flex: 1; display: flex; flex-direction: column; }
+  .product-cat { font-size: 0.72rem; color: var(--mid); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.3rem; }
+  .product-name { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; line-height: 1.4; }
+  .stars { display: flex; align-items: center; gap: 4px; margin-bottom: 0.6rem; }
+  .stars-icons { color: #F5A623; font-size: 0.8rem; }
+  .stars-count { font-size: 0.75rem; color: var(--mid); }
+  .product-desc { font-size: 0.8rem; color: var(--mid); line-height: 1.5; margin-bottom: 1rem; flex: 1; }
+  .product-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 0.8rem; margin-top: auto; }
+  .price { font-size: 1.15rem; font-weight: 700; }
+  .price-old { font-size: 0.8rem; color: var(--light); text-decoration: line-through; margin-left: 4px; }
+  .btn-amazon { background: var(--accent); color: var(--warm-white); padding: 0.55rem 1.2rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-decoration: none; box-shadow: 0 3px 10px rgba(193,122,59,0.3); transition: transform 0.2s ease, box-shadow 0.2s ease; white-space: nowrap; display: inline-block; }
+  .btn-amazon:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(193,122,59,0.42); }
+  .top-pick { padding: 2rem 0; }
+  .top-pick-inner { background: var(--accent-light); border-radius: 18px; padding: 2.5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; color: var(--charcoal); }
+  .top-pick-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 20px; margin-bottom: 1rem; }
+  .top-pick h2 { font-size: 1.6rem; letter-spacing: -0.03em; margin-bottom: 0.7rem; color: var(--charcoal); }
+  .top-pick p { color: #5C3D1E; font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .top-pick-features { list-style: none; margin-bottom: 1.5rem; }
+  .top-pick-features li { font-size: 0.85rem; color: #5C3D1E; padding: 0.3rem 0; display: flex; align-items: center; gap: 8px; }
+  .top-pick-features li::before { content: "✓"; color: var(--accent); font-weight: 700; }
+  .top-pick-right { background: rgba(193,122,59,0.15); border-radius: 12px; padding: 2rem; text-align: center; border: 1px solid var(--border); }
+  .top-pick-emoji { font-size: 4rem; margin-bottom: 1rem; }
+  .top-pick-price { font-size: 2rem; font-weight: 700; color: var(--charcoal); }
+  .top-pick-price small { font-size: 0.9rem; color: rgba(255,255,255,0.5); text-decoration: line-through; margin-left: 6px; }
+  .btn-amazon-white { display: inline-block; margin-top: 1rem; background: var(--accent); color: #fff; padding: 0.85rem 1.8rem; border-radius: 30px; font-size: 0.9rem; font-weight: 700; text-decoration: none; box-shadow: 0 4px 14px rgba(193,122,59,0.35); transition: transform 0.2s ease, box-shadow 0.2s ease; width: 100%; text-align: center; }
+  .btn-amazon-white:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(193,122,59,0.45); }
+  .guides { padding: 2rem 0 3.5rem; background: var(--warm-white); border-top: 1px solid var(--border); }
+  .newsletter { padding: 4rem 0; text-align: center; }
+  .newsletter-box { background: var(--accent-light); border: 1px solid #E8D5B7; border-radius: 18px; padding: 3rem 2rem; max-width: 540px; margin: 0 auto; }
+  .newsletter-box h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+  .newsletter-box p { color: var(--mid); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .email-row { display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto; }
+  .email-row input { flex: 1; padding: 0.7rem 1rem; border: 1px solid var(--border); border-radius: 8px; font-size: 0.88rem; background: var(--warm-white); color: var(--charcoal); outline: none; }
+  .email-row input:focus { border-color: var(--accent); }
+  .email-row button { background: var(--charcoal); color: #fff; border: none; padding: 0.8rem 1.4rem; border-radius: 24px; font-size: 0.88rem; font-weight: 600; cursor: pointer; white-space: nowrap; box-shadow: 0 3px 10px rgba(28,28,28,0.2); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .email-row button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(28,28,28,0.28); }
+  footer { background: var(--accent-light); color: #5C3D1E; font-size: 0.8rem; padding: 2.5rem 1.5rem; text-align: center; line-height: 2; border-top: 1px solid var(--border); }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { color: var(--charcoal); }
+  .footer-links { margin-bottom: 0.7rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+  .disclaimer { max-width: 620px; margin: 0.8rem auto 0; font-size: 0.72rem; color: #8B5A2B; }
+  @media (max-width: 640px) { .top-pick-inner { grid-template-columns: 1fr; } nav ul { display: none; } .hero { padding: 3rem 1.2rem 2.5rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">Home<span>Essentials</span></a>
+  <ul>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#guides">Buying Guides</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#products" class="nav-cta">Shop on Amazon →</a></li>
+  </ul>
+</nav>
+
+<div style="position: relative; border-bottom: 1px solid var(--border); background-image: linear-gradient(rgba(253,251,247,0.82), rgba(253,251,247,0.88)), url('portada.jpg'); background-size: cover; background-position: center 65%;">
+  <div class="hero">
+    <span class="hero-tag">✦ Verified picks</span>
+    <h1>The best products for your <em>home & kitchen</em></h1>
+    <p>We research and compare hundreds of Amazon products so you only have to choose the best one.</p>
+    <div class="hero-buttons">
+      <a href="#products" class="btn-primary">Browse products</a>
+      <a href="#recipes" class="btn-secondary">View Recipes 🍳</a>
+      <a href="#guides" class="btn-secondary">Buying Guides 📖</a>
+    </div>
+  </div>
+</div>
+
+<div class="grandma-divider" aria-hidden="true">
+  <svg width="140" height="28" viewBox="0 0 140 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="14" x2="52" y2="14" stroke="#E8E3DC" stroke-width="1"/>
+    <line x1="88" y1="14" x2="140" y2="14" stroke="#E8E3DC" stroke-width="1"/>
+    <g stroke="#C17A3B" stroke-width="1.3" fill="none" stroke-linecap="round">
+      <path d="M70 26 C70 20 70 14 70 8"/>
+      <path d="M70 18 C64 15 60 11 62 6"/>
+      <path d="M70 18 C76 15 80 11 78 6"/>
+      <path d="M70 12 C66 10 64 7 66 4"/>
+      <path d="M70 12 C74 10 76 7 74 4"/>
+      <circle cx="70" cy="6" r="3" fill="#C17A3B" stroke="none"/>
+    </g>
+  </svg>
+</div>
+
+<section class="categories" id="categories">
+  <div class="container">
+    <div class="section-header" style="padding-top: 2rem;">
+      <h2>Shop by category</h2>
+      <p>Find exactly what you're looking for</p>
+    </div>
+
+    <div class="category-buttons">
+      <a href="#best-kitchen-gadgets" class="category-main-btn">🍳 Best Kitchen Gadgets</a>
+      <a href="#quick-easy-tools" class="category-main-btn">⚡ Quick & Easy Cooking Tools</a>
+      <a href="#grandma-core-decor" class="category-main-btn">🏡 Grandma Core Decor</a>
+      <a href="#halloween-finds" class="category-main-btn">🎃 Halloween</a>
+    </div>
+
+    <div id="best-kitchen-gadgets" style="margin-top: 2rem;">
+      <button class="category-toggle" onclick="toggleCategory(this)">
+        <span>— Best Kitchen Gadgets —</span>
+        <span class="category-toggle-icon">⌄</span>
+      </button>
+      <div class="category-collapse">
+        <div class="category-grid" style="margin-bottom: 1.5rem;">
+          <a href="#airfryer" class="category-card"><span class="category-icon">🍟</span><h3>Air Fryers</h3><span>Crispy & healthy</span></a>
+          <a href="#instantpot" class="category-card"><span class="category-icon">🫙</span><h3>Instant Pot</h3><span>Multi cookers</span></a>
+          <a href="#chopper" class="category-card"><span class="category-icon">🥗</span><h3>Choppers</h3><span>Prep tools</span></a>
+          <a href="#skillet" class="category-card"><span class="category-icon">🍳</span><h3>Cast Iron</h3><span>Since 1896</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="quick-easy-tools">
+      <button class="category-toggle" onclick="toggleCategory(this)">
+        <span>— Quick & Easy Cooking Tools —</span>
+        <span class="category-toggle-icon">⌄</span>
+      </button>
+      <div class="category-collapse">
+        <div class="category-grid" style="margin-bottom: 1.5rem;">
+          <a href="#bakingmat" class="category-card"><span class="category-icon">🧁</span><h3>Baking</h3><span>Mats & tools</span></a>
+          <a href="#scale" class="category-card"><span class="category-icon">⚖️</span><h3>Scales</h3><span>Precision cooking</span></a>
+          <a href="#thermometer" class="category-card"><span class="category-icon">🌡️</span><h3>Thermometers</h3><span>Perfect temps</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="grandma-core-decor">
+      <button class="category-toggle" onclick="toggleCategory(this)">
+        <span>— Grandma Core Decor —</span>
+        <span class="category-toggle-icon">⌄</span>
+      </button>
+      <div class="category-collapse">
+        <div class="category-grid">
+          <a href="#canisters" class="category-card"><span class="category-icon">🫙</span><h3>Canisters</h3><span>Ceramic sets</span></a>
+          <a href="#herbplanter" class="category-card"><span class="category-icon">🌿</span><h3>Herb Planters</h3><span>Windowsill garden</span></a>
+          <a href="#glassjars" class="category-card"><span class="category-icon">🏺</span><h3>Glass Jars</h3><span>Pantry storage</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="halloween-finds">
+      <button class="category-toggle" onclick="toggleCategory(this)">
+        <span>— 🎃 Halloween —</span>
+        <span class="category-toggle-icon">⌄</span>
+      </button>
+      <div class="category-collapse">
+        <div class="category-grid">
+          <a href="#notebook" class="category-card"><span class="category-icon">📓</span><h3>Leather Journal</h3><span>Rustic diary</span></a>
+          <a href="#lunchbox" class="category-card"><span class="category-icon">👜</span><h3>Lunch Bag</h3><span>Waxed canvas</span></a>
+          <a href="#calderovase" class="category-card"><span class="category-icon">🍯</span><h3>Cauldron & Vases</h3><span>2-in-1 set</span></a>
+          <a href="#bowls" class="category-card"><span class="category-icon">🍜</span><h3>Soup Bowls</h3><span>Set of 4</span></a>
+          <a href="#pumpkiniron" class="category-card"><span class="category-icon">🎃</span><h3>Pumpkin Dutch Oven</h3><span>4.5-qt enameled</span></a>
+          <a href="#candelabra" class="category-card"><span class="category-icon">🕯️</span><h3>Candelabra</h3><span>5-arm taper</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <section class="top-pick" id="featured">
+    <div class="top-pick-inner">
+      <div>
+        <span class="top-pick-badge">⭐ Editor's choice</span>
+        <h2>Instant Pot Duo 7-in-1 Electric Pressure Cooker</h2>
+        <p>The most versatile kitchen appliance you can own. Replaces 7 kitchen tools in one compact device — over 10,000 people buy it every month on Amazon.</p>
+        <ul class="top-pick-features">
+          <li>Pressure cooker, slow cooker & rice cooker</li>
+          <li>Sauté, steamer, yogurt maker & warmer</li>
+          <li>App with 800+ recipes included</li>
+          <li>4.7 stars — Amazon's most loved cooker</li>
+        </ul>
+      </div>
+      <div class="top-pick-right">
+        <div class="top-pick-emoji"><img src="instantpot.png" alt="Instant Pot" style="width:100px;height:100px;object-fit:cover;border-radius:12px;"></div>
+        <div class="top-pick-price">$109.99</div>
+        <div style="font-size: 0.8rem; color: #5C3D1E; margin-top: 0.3rem;">Price on Amazon.com</div>
+        <a href="https://a.co/d/02SSnK0b?tag=anthonnyhome-20" class="btn-amazon-white" target="_blank" rel="noopener noreferrer">View on Amazon →</a>
+        <div style="font-size: 0.7rem; color: #8B5A2B; margin-top: 0.7rem;">*Affiliate link</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="products" style="background: var(--cream); border-top: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our top picks</h2>
+      <p>We only include products that are genuinely worth buying</p>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Air Fryer</button>
+      <button class="filter-btn">Instant Pot</button>
+      <button class="filter-btn">Baking</button>
+      <button class="filter-btn">Tools</button>
+      <button class="filter-btn">Cookware</button>
+    </div>
+    <p class="guide-swipe-hint" style="display: block; margin-bottom: 0.3rem;">👉 Swipe to browse all picks</p>
+    <div class="product-grid">
+
+      <div class="product-card" id="airfryer">
+        <div class="product-img"><img src="airfryer.png" alt="Air Fryer" style="width:100%;height:100%;object-fit:cover;"><span class="badge badge-top">Best seller</span></div>
+        <div class="product-info">
+          <p class="product-cat">Air Fryer</p>
+          <p class="product-name">Chefman Air Fryer 6 QT – Hi-Fry Technology, Touchscreen, 4 Presets</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.6 stars</span></div>
+          <p class="product-desc">Extra crispy results with Hi-Fry Technology. Nonstick dishwasher-safe basket, touchscreen controls and 4 cooking presets. Perfect for quick meals.</p>
+          <div class="product-footer">
+            <div><span class="price">$69.99</span></div>
+            <a href="https://a.co/d/07BXI9Ii?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="instantpot">
+        <div class="product-img"><img src="instantpot.png" alt="Instant Pot" style="width:100%;height:100%;object-fit:cover;"><span class="badge badge-top">10K+ / month</span></div>
+        <div class="product-info">
+          <p class="product-cat">Multi Cooker</p>
+          <p class="product-name">Instant Pot Duo 7-in-1 Electric Pressure Cooker, 6 Quart</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.7 stars</span></div>
+          <p class="product-desc">Replaces 7 kitchen appliances. Includes app with 800+ recipes. Stainless steel, 6 quart capacity. Amazon's most purchased kitchen item.</p>
+          <div class="product-footer">
+            <div><span class="price">$109.99</span></div>
+            <a href="https://a.co/d/02SSnK0b?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="chopper">
+        <div class="product-img"><img src="chopper.png" alt="Vegetable Chopper" style="width:100%;height:100%;object-fit:cover;"><span class="badge badge-sale">Only $13</span></div>
+        <div class="product-info">
+          <p class="product-cat">Prep Tools</p>
+          <p class="product-name">8 Blade All-in-1 Vegetable Chopper Mandoline Slicer with Container</p>
+          <div class="stars"><span class="stars-icons">★★★★☆</span><span class="stars-count">4.3 stars</span></div>
+          <p class="product-desc">8 interchangeable blades for chopping, slicing and dicing. Includes container to catch food. Perfect for salads, onions and meal prep.</p>
+          <div class="product-footer">
+            <div><span class="price">$12.99</span></div>
+            <a href="https://a.co/d/0aluZQtb?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="bakingmat">
+        <div class="product-img"><img src="bakingmat.jpg" alt="Baking Mat" style="width:100%;height:100%;object-fit:cover;"><span class="badge badge-new">4-Pack</span></div>
+        <div class="product-info">
+          <p class="product-cat">Baking</p>
+          <p class="product-name">Amazon Basics Non-Stick Silicone Baking Mat, 4-Pack, 16.5" x 11.6"</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.7 stars</span></div>
+          <p class="product-desc">Reusable, food safe and dishwasher safe. Heat resistant baking mats replace parchment paper forever. 4-pack value deal.</p>
+          <div class="product-footer">
+            <div><span class="price">$17.84</span></div>
+            <a href="https://a.co/d/059pFkDI?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="scale">
+        <div class="product-img"><img src="scale.png" alt="Kitchen Scale" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="product-info">
+          <p class="product-cat">Kitchen Tools</p>
+          <p class="product-name">Food Scale, 22lb Digital Kitchen Scale – Stainless Steel & Tempered Glass</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.7 stars</span></div>
+          <p class="product-desc">Precise 1g/0.1oz graduation. Weighs up to 22 lbs. Stainless steel platform with tempered glass. Perfect for baking and portion control.</p>
+          <div class="product-footer">
+            <div><span class="price">$25.99</span></div>
+            <a href="https://a.co/d/0fVIsPwZ?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="thermometer">
+        <div class="product-img"><img src="thermometer.png" alt="Meat Thermometer" style="width:100%;height:100%;object-fit:cover;"><span class="badge badge-top">Top rated</span></div>
+        <div class="product-info">
+          <p class="product-cat">Grilling Tools</p>
+          <p class="product-name">Alpha Grillers Instant Read Meat Thermometer – Professional Kitchen Tool</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.8 stars</span></div>
+          <p class="product-desc">Instant read digital thermometer for cooking and grilling. Professional grade accuracy. Great gift for dad, husband or any home cook.</p>
+          <div class="product-footer">
+            <div><span class="price">$13.99</span></div>
+            <a href="https://a.co/d/088L1Uxh?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="skillet">
+        <div class="product-img"><img src="skillet.png" alt="Cast Iron Skillet" style="width:100%;height:100%;object-fit:cover;"><span class="badge badge-sale">🔥 Prime Deal</span></div>
+        <div class="product-info">
+          <p class="product-cat">Cookware</p>
+          <p class="product-name">Lodge Seasoned Cast Iron Skillet 10.25" – Pre-Seasoned, PFAS Free, Made in USA</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.6 stars (144,204 reviews)</span></div>
+          <p class="product-desc">The most iconic cast iron skillet in America. Pre-seasoned, PFAS free and made in Tennessee since 1896. Hot handle holder included. Works on all cooktops.</p>
+          <div class="product-footer">
+            <div><span class="price">$69.93</span></div>
+            <a href="https://a.co/d/07JfJHng?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="canisters">
+        <div class="product-img"><img src="canisters.jpg" alt="Ceramic Canisters" style="width:100%;height:100%;object-fit:cover;"><span class="badge badge-new">Grandma Core</span></div>
+        <div class="product-info">
+          <p class="product-cat">Kitchen Decor</p>
+          <p class="product-name">Tabletops Gallery Ceramic Canister Set – Stoneware Embossed Acacia Wood White, 3 Piece</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.7 stars (1,188 reviews)</span></div>
+          <p class="product-desc">Beautiful stoneware ceramic canisters with embossed zigzag pattern and natural acacia wood lids. Perfect for storing coffee, sugar, tea and flour in style.</p>
+          <div class="product-footer">
+            <div><span class="price">$41.99</span></div>
+            <a href="https://a.co/d/00HzSbYC?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="herbplanter">
+        <div class="product-img"><img src="herbplanter.jpg" alt="Herb Planter" style="width:100%;height:100%;object-fit:cover;"><span class="badge badge-sale">🔥 Prime Deal</span></div>
+        <div class="product-info">
+          <p class="product-cat">Kitchen Decor</p>
+          <p class="product-name">Barnyard Designs Indoor Herb Garden Planter Set with Tray – Metal Windowsill Plant Pots, Set of 3</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.5 stars (3,880 reviews)</span></div>
+          <p class="product-desc">Top reviewed for appearance! Metal windowsill herb planters with drainage tray. Perfect for growing fresh herbs indoors. Available in mint green and more colors.</p>
+          <div class="product-footer">
+            <div><span class="price">$24.95</span></div>
+            <a href="https://a.co/d/00h4PASt?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="glassjars">
+        <div class="product-img"><img src="glassjars.jpg" alt="Glass Pantry Jars" style="width:100%;height:100%;object-fit:cover;"><span class="badge badge-new">New</span></div>
+        <div class="product-info">
+          <p class="product-cat">Organization</p>
+          <p class="product-name">6 Set Glass Pantry Storage Jars with Acacia Airtight Lid – 15oz Thicken Glass Kitchen Canisters with 132 Labels</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.7 stars (414 reviews)</span></div>
+          <p class="product-desc">Clear glass food storage containers with wooden acacia lids and 132 pantry labels included. Perfect for tea, sugar, spices and herbs. Airtight seal keeps food fresh.</p>
+          <div class="product-footer">
+            <div><span class="price">$34.99</span></div>
+            <a href="https://a.co/d/08p94s1z?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="notebook">
+        <div class="product-img"><img src="notebook.png" alt="Leather Journal Notebook" style="width:100%;height:100%;object-fit:cover;"><span class="badge badge-new">Handmade</span></div>
+        <div class="product-info">
+          <p class="product-cat">Grandma Core</p>
+          <p class="product-name">HLC Leather Journal Notebook – Rustic Handmade Vintage Leather Bound, 300 Pages</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.7 stars (2,376 reviews)</span></div>
+          <p class="product-desc">Antique-style leather bound journal with unlined paper. Beautiful vintage look, perfect for journaling, sketching or as a thoughtful gift.</p>
+          <div class="product-footer">
+            <div><span class="price">$27.99</span></div>
+            <a href="https://a.co/d/09TlnP44?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="lunchbox">
+        <div class="product-img"><img src="lunchbox.png" alt="Waxed Canvas Lunch Bag" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="product-info">
+          <p class="product-cat">Kitchen Decor</p>
+          <p class="product-name">Waxed Canvas Lunch Bag – Reusable Insulated Lunchbox with Shoulder Strap</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.6 stars (4,364 reviews)</span></div>
+          <p class="product-desc">Stylish, leakproof and durable insulated lunch bag. Perfect for work, picnics and travel — a cozy cottagecore alternative to plastic lunch boxes.</p>
+          <div class="product-footer">
+            <div><span class="price">$29.99</span></div>
+            <a href="https://a.co/d/02tz8VOc?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="calderovase">
+        <div class="product-img"><img src="calderoybottles.png" alt="Cast Iron Cauldron Dutch Oven and Amber Glass Bud Vases" style="width:100%;height:100%;object-fit:cover;"><span class="badge badge-new">2-in-1 pick</span></div>
+        <div class="product-info">
+          <p class="product-cat">Halloween</p>
+          <p class="product-name">Bruntmor 12 QT Cast Iron Cauldron Dutch Oven + Amber Glass Bud Vase Set of 20</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.6 stars</span></div>
+          <p class="product-desc">The moody cauldron centerpiece and amber bud vases from our Halloween table — bundle the cast iron cauldron with 20 mini amber vases for the full look.</p>
+          <div class="product-footer">
+            <div><span class="price">$134.99 + $32.99</span></div>
+            <div style="display:flex; gap:0.5rem; flex-wrap: wrap;">
+              <a href="https://a.co/d/0c4PZcxJ?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">Cauldron →</a>
+              <a href="https://a.co/d/03gM528q?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">Vases →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="bowls">
+        <div class="product-img"><img src="ceramicsoup.jpg" alt="DOWAN Ceramic Soup Bowls" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="product-info">
+          <p class="product-cat">Kitchen Decor</p>
+          <p class="product-name">DOWAN 22oz Ceramic Soup & Cereal Bowls, Set of 4 (Black)</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.7 stars (12,875 reviews)</span></div>
+          <p class="product-desc">Classic 6" ceramic bowls for soup, cereal, oatmeal or rice. Dishwasher and microwave safe — an Amazon's Choice pick that pairs beautifully with moody table settings.</p>
+          <div class="product-footer">
+            <div><span class="price">$32.99</span></div>
+            <a href="https://a.co/d/0aIrWceH?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="pumpkiniron">
+        <div class="product-img"><img src="pumpkiniron.png" alt="Pumpkin Enameled Cast Iron Dutch Oven" style="width:100%;height:100%;object-fit:cover;"><span class="badge badge-new">🎃 Seasonal</span></div>
+        <div class="product-info">
+          <p class="product-cat">Halloween</p>
+          <p class="product-name">COOKWIN Pumpkin Enameled Cast Iron Dutch Oven with Lid, 4.5 QT (Orange)</p>
+          <div class="stars"><span class="stars-icons">★★★★★</span><span class="stars-count">4.6 stars (196 reviews)</span></div>
+          <p class="product-desc">Adorable pumpkin-shaped enameled cast iron pot, oven safe and perfect for bread baking, braising and soups. Serves 3-5, and doubles as fall/Halloween decor.</p>
+          <div class="product-footer">
+            <div><span class="price">$73.99</span></div>
+            <a href="https://a.co/d/0g7gLqJ0?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" id="candelabra">
+        <div class="product-img"><img src="candelabra.jpg" alt="5-Arm Black Candelabra" style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="product-info">
+          <p class="product-cat">Halloween</p>
+          <p class="product-name">RELY+ 5-Arm Matte Black Candelabra Taper Candle Holder, 10" Tall</p>
+          <div class="stars"><span class="stars-icons">★★★★☆</span><span class="stars-count">4.2 stars (881 reviews)</span></div>
+          <p class="product-desc">Gothic-inspired matte black candelabra, perfect centerpiece for a moody Halloween or fall dinner table. Holds 5 taper candles for dramatic ambiance.</p>
+          <div class="product-footer">
+            <div><span class="price">$19.79</span></div>
+            <a href="https://a.co/d/0hsHpjlk?tag=anthonnyhome-20" class="btn-amazon" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RECIPES SECTION -->
+<section id="recipes" style="background: var(--warm-white); border-top: 1px solid var(--border); padding: 2rem 0 3.5rem;">
+  <div class="container">
+    <button class="category-toggle active" onclick="toggleCategory(this)" style="padding-top: 3.5rem; padding-bottom: 0.5rem;">
+      <span style="font-size: 1.7rem; font-weight: 700; letter-spacing: -0.03em; color: var(--charcoal); text-transform: none; font-family: inherit; letter-spacing: -0.03em;">Quick & Easy Recipes</span>
+      <span class="category-toggle-icon" style="font-size: 1.4rem;">⌄</span>
+    </button>
+    <p style="text-align: center; color: var(--mid); font-size: 0.95rem; margin-bottom: 1.5rem;">Simple recipes using our top Amazon picks</p>
+    <div class="category-collapse open">
+    <div class="recipe-list">
+
+      <div class="recipe-item">
+        <button class="recipe-toggle" onclick="toggleRecipe(this)">
+          <span>🍗 Air Fryer Crispy Wings – Ready in 25 Minutes</span>
+          <span class="recipe-icon">+</span>
+        </button>
+        <div class="recipe-content">
+          <p class="recipe-intro">The crispiest chicken wings you'll ever make with less oil!</p>
+          <div class="recipe-grid">
+            <div>
+              <h4>🛒 Ingredients</h4>
+              <ul>
+                <li>2 lbs chicken wings</li>
+                <li>1 tsp garlic powder</li>
+                <li>1 tsp paprika</li>
+                <li>1 tsp onion powder</li>
+                <li>Salt and pepper to taste</li>
+              </ul>
+            </div>
+            <div>
+              <h4>👩‍🍳 Instructions</h4>
+              <ol>
+                <li>Season wings with all spices</li>
+                <li>Preheat air fryer to 400°F</li>
+                <li>Cook wings for 25 minutes</li>
+                <li>Flip halfway through</li>
+                <li>Serve hot and crispy!</li>
+              </ol>
+            </div>
+          </div>
+          <a href="https://a.co/d/07BXI9Ii?tag=anthonnyhome-20" class="recipe-btn" target="_blank" rel="noopener">🍟 Get the Chefman Air Fryer 6QT – Only $69.99 on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="recipe-item">
+        <button class="recipe-toggle" onclick="toggleRecipe(this)">
+          <span>🫙 Instant Pot Beef Stew – Ready in 30 Minutes</span>
+          <span class="recipe-icon">+</span>
+        </button>
+        <div class="recipe-content">
+          <p class="recipe-intro">The most comforting beef stew you'll ever make — in just 30 minutes!</p>
+          <div class="recipe-grid">
+            <div>
+              <h4>🛒 Ingredients</h4>
+              <ul>
+                <li>2 lbs beef chunks</li>
+                <li>3 carrots chopped</li>
+                <li>3 potatoes cubed</li>
+                <li>1 onion diced</li>
+                <li>2 cups beef broth</li>
+                <li>Salt, pepper & herbs</li>
+              </ul>
+            </div>
+            <div>
+              <h4>👩‍🍳 Instructions</h4>
+              <ol>
+                <li>Sauté onion in Instant Pot</li>
+                <li>Add beef and brown slightly</li>
+                <li>Add all ingredients</li>
+                <li>Pressure cook HIGH 25 min</li>
+                <li>Natural release 10 minutes</li>
+              </ol>
+            </div>
+          </div>
+          <a href="https://a.co/d/02SSnK0b?tag=anthonnyhome-20" class="recipe-btn" target="_blank" rel="noopener">🫙 Get the Instant Pot 7-in-1 – Only $109.99 on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="recipe-item">
+        <button class="recipe-toggle" onclick="toggleRecipe(this)">
+          <span>🥗 Fresh Garden Salad – Ready in 5 Minutes</span>
+          <span class="recipe-icon">+</span>
+        </button>
+        <div class="recipe-content">
+          <p class="recipe-intro">The fastest and freshest garden salad ever — zero effort chopping!</p>
+          <div class="recipe-grid">
+            <div>
+              <h4>🛒 Ingredients</h4>
+              <ul>
+                <li>2 tomatoes</li>
+                <li>1 cucumber</li>
+                <li>1 bell pepper</li>
+                <li>1 red onion</li>
+                <li>Fresh herbs</li>
+                <li>Olive oil & lemon</li>
+              </ul>
+            </div>
+            <div>
+              <h4>👩‍🍳 Instructions</h4>
+              <ol>
+                <li>Wash all vegetables</li>
+                <li>Chop everything in seconds</li>
+                <li>Add to a large bowl</li>
+                <li>Drizzle olive oil & lemon</li>
+                <li>Toss and serve fresh!</li>
+              </ol>
+            </div>
+          </div>
+          <a href="https://a.co/d/0aluZQtb?tag=anthonnyhome-20" class="recipe-btn" target="_blank" rel="noopener">🥗 Get the 8-Blade Veggie Chopper – Only $12.99 on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="recipe-item">
+        <button class="recipe-toggle" onclick="toggleRecipe(this)">
+          <span>🍌 Grandma's Banana Bread – Ready in 60 Minutes</span>
+          <span class="recipe-icon">+</span>
+        </button>
+        <div class="recipe-content">
+          <p class="recipe-intro">The moistest banana bread ever — and it never sticks to the pan!</p>
+          <div class="recipe-grid">
+            <div>
+              <h4>🛒 Ingredients</h4>
+              <ul>
+                <li>3 ripe bananas mashed</li>
+                <li>2 cups flour</li>
+                <li>1/2 cup butter melted</li>
+                <li>3/4 cup sugar</li>
+                <li>2 eggs</li>
+                <li>1 tsp vanilla & baking soda</li>
+              </ul>
+            </div>
+            <div>
+              <h4>👩‍🍳 Instructions</h4>
+              <ol>
+                <li>Mix wet ingredients</li>
+                <li>Add dry ingredients</li>
+                <li>Pour on silicone baking mat</li>
+                <li>Bake 350°F for 60 minutes</li>
+                <li>Cool and enjoy!</li>
+              </ol>
+            </div>
+          </div>
+          <a href="https://a.co/d/059pFkDI?tag=anthonnyhome-20" class="recipe-btn" target="_blank" rel="noopener">🧁 Get the Silicone Baking Mat 4-Pack – Only $17.84 on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="recipe-item">
+        <button class="recipe-toggle" onclick="toggleRecipe(this)">
+          <span>🍗 Perfect Roast Chicken – Ready in 90 Minutes</span>
+          <span class="recipe-icon">+</span>
+        </button>
+        <div class="recipe-content">
+          <p class="recipe-intro">Never serve undercooked chicken again with this foolproof recipe!</p>
+          <div class="recipe-grid">
+            <div>
+              <h4>🛒 Ingredients</h4>
+              <ul>
+                <li>1 whole chicken</li>
+                <li>4 tbsp butter softened</li>
+                <li>4 garlic cloves</li>
+                <li>Fresh rosemary & thyme</li>
+                <li>1 lemon sliced</li>
+                <li>Salt and pepper</li>
+              </ul>
+            </div>
+            <div>
+              <h4>👩‍🍳 Instructions</h4>
+              <ol>
+                <li>Rub chicken with butter & herbs</li>
+                <li>Stuff with lemon & garlic</li>
+                <li>Roast at 425°F for 90 min</li>
+                <li>Check temp reaches 165°F</li>
+                <li>Rest 10 min before serving</li>
+              </ol>
+            </div>
+          </div>
+          <a href="https://a.co/d/088L1Uxh?tag=anthonnyhome-20" class="recipe-btn" target="_blank" rel="noopener">🌡️ Get the Alpha Grillers Thermometer – Only $13.99 on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="recipe-item">
+        <button class="recipe-toggle" onclick="toggleRecipe(this)">
+          <span>🌿 Fresh Herb Chimichurri Sauce – Ready in 5 Minutes</span>
+          <span class="recipe-icon">+</span>
+        </button>
+        <div class="recipe-content">
+          <p class="recipe-intro">Grow your own herbs and make this incredible sauce in minutes!</p>
+          <div class="recipe-grid">
+            <div>
+              <h4>🛒 Ingredients</h4>
+              <ul>
+                <li>1 cup fresh parsley</li>
+                <li>1/2 cup fresh cilantro</li>
+                <li>4 garlic cloves</li>
+                <li>1/3 cup olive oil</li>
+                <li>2 tbsp red wine vinegar</li>
+                <li>Salt & red pepper flakes</li>
+              </ul>
+            </div>
+            <div>
+              <h4>👩‍🍳 Instructions</h4>
+              <ol>
+                <li>Pick fresh herbs from your planter</li>
+                <li>Chop herbs and garlic finely</li>
+                <li>Mix all ingredients together</li>
+                <li>Let rest 10 minutes</li>
+                <li>Serve with meat or bread!</li>
+              </ol>
+            </div>
+          </div>
+          <a href="https://a.co/d/00h4PASt?tag=anthonnyhome-20" class="recipe-btn" target="_blank" rel="noopener">🌿 Get the Barnyard Designs Herb Planter – Only $24.95 on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="recipe-item">
+        <button class="recipe-toggle" onclick="toggleRecipe(this)">
+          <span>🫙 Homemade Vanilla Sugar – Perfect Pantry Gift</span>
+          <span class="recipe-icon">+</span>
+        </button>
+        <div class="recipe-content">
+          <p class="recipe-intro">The most beautiful pantry staple — and so easy to make!</p>
+          <div class="recipe-grid">
+            <div>
+              <h4>🛒 Ingredients</h4>
+              <ul>
+                <li>2 cups white sugar</li>
+                <li>2 vanilla beans</li>
+                <li>1 ceramic canister</li>
+                <li>Optional: cinnamon stick</li>
+              </ul>
+            </div>
+            <div>
+              <h4>👩‍🍳 Instructions</h4>
+              <ol>
+                <li>Split vanilla beans lengthwise</li>
+                <li>Add sugar to ceramic canister</li>
+                <li>Bury vanilla beans in sugar</li>
+                <li>Seal and wait 1-2 weeks</li>
+                <li>Use in coffee, baking & more!</li>
+              </ol>
+            </div>
+          </div>
+          <a href="https://a.co/d/00HzSbYC?tag=anthonnyhome-20" class="recipe-btn" target="_blank" rel="noopener">🫙 Get the Ceramic Canister Set – Only $41.99 on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="recipe-item">
+        <button class="recipe-toggle" onclick="toggleRecipe(this)">
+          <span>🌽 Cast Iron Skillet Cornbread – Grandma's Secret Recipe</span>
+          <span class="recipe-icon">+</span>
+        </button>
+        <div class="recipe-content">
+          <p class="recipe-intro">Golden, crispy edges and fluffy inside — the most delicious cornbread ever!</p>
+          <div class="recipe-grid">
+            <div>
+              <h4>🛒 Ingredients</h4>
+              <ul>
+                <li>1 cup cornmeal</li>
+                <li>1 cup all-purpose flour</li>
+                <li>1 tbsp baking powder</li>
+                <li>1/2 tsp salt</li>
+                <li>1 cup buttermilk</li>
+                <li>2 eggs & 1/4 cup butter</li>
+              </ul>
+            </div>
+            <div>
+              <h4>👩‍🍳 Instructions</h4>
+              <ol>
+                <li>Preheat oven to 425°F</li>
+                <li>Heat cast iron skillet in oven</li>
+                <li>Mix all ingredients together</li>
+                <li>Pour batter into hot skillet</li>
+                <li>Bake 20 min until golden!</li>
+              </ol>
+            </div>
+          </div>
+          <a href="https://a.co/d/07JfJHng?tag=anthonnyhome-20" class="recipe-btn" target="_blank" rel="noopener">🍳 Get the Lodge Cast Iron Skillet – Only $69.93 on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="recipe-item">
+        <button class="recipe-toggle" onclick="toggleRecipe(this)">
+          <span>🐟 Air Fryer Salmon – Perfectly Cooked in 12 Minutes</span>
+          <span class="recipe-icon">+</span>
+        </button>
+        <div class="recipe-content">
+          <p class="recipe-intro">The easiest and most delicious salmon you'll ever make!</p>
+          <div class="recipe-grid">
+            <div>
+              <h4>🛒 Ingredients</h4>
+              <ul>
+                <li>2 salmon fillets</li>
+                <li>2 tbsp olive oil</li>
+                <li>1 tsp garlic powder</li>
+                <li>1 tsp paprika</li>
+                <li>Salt, pepper & lemon</li>
+                <li>Fresh dill on top</li>
+              </ul>
+            </div>
+            <div>
+              <h4>👩‍🍳 Instructions</h4>
+              <ol>
+                <li>Pat salmon dry with paper towel</li>
+                <li>Brush with olive oil & spices</li>
+                <li>Preheat air fryer to 400°F</li>
+                <li>Cook 12 minutes</li>
+                <li>Serve with lemon & dill!</li>
+              </ol>
+            </div>
+          </div>
+          <a href="https://a.co/d/07BXI9Ii?tag=anthonnyhome-20" class="recipe-btn" target="_blank" rel="noopener">🍟 Get the Chefman Air Fryer 6QT – Only $69.99 on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="recipe-item">
+        <button class="recipe-toggle" onclick="toggleRecipe(this)">
+          <span>🧀 Instant Pot Mac & Cheese – Creamiest Recipe in 10 Minutes</span>
+          <span class="recipe-icon">+</span>
+        </button>
+        <div class="recipe-content">
+          <p class="recipe-intro">The creamiest, most comforting mac & cheese — ready in just 10 minutes!</p>
+          <div class="recipe-grid">
+            <div>
+              <h4>🛒 Ingredients</h4>
+              <ul>
+                <li>1 lb elbow macaroni</li>
+                <li>4 cups water</li>
+                <li>1 tsp salt</li>
+                <li>2 cups shredded cheddar</li>
+                <li>1/2 cup milk</li>
+                <li>2 tbsp butter</li>
+              </ul>
+            </div>
+            <div>
+              <h4>👩‍🍳 Instructions</h4>
+              <ol>
+                <li>Add pasta, water & salt to pot</li>
+                <li>Pressure cook HIGH 4 minutes</li>
+                <li>Quick release pressure</li>
+                <li>Stir in cheese, milk & butter</li>
+                <li>Serve immediately!</li>
+              </ol>
+            </div>
+          </div>
+          <a href="https://a.co/d/02SSnK0b?tag=anthonnyhome-20" class="recipe-btn" target="_blank" rel="noopener">🫙 Get the Instant Pot 7-in-1 – Only $109.99 on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="recipe-item">
+        <button class="recipe-toggle" onclick="toggleRecipe(this)">
+          <span>🍓 Red, White & Blue Berry Trifle – No-Bake in 15 Minutes</span>
+          <span class="recipe-icon">+</span>
+        </button>
+        <div class="recipe-content">
+          <p class="recipe-intro">A no-bake, glossy layered trifle in patriotic colors — the prettiest (and easiest) 4th of July dessert on the table.</p>
+          <div class="recipe-grid">
+            <div>
+              <h4>🛒 Ingredients</h4>
+              <ul>
+                <li>2 cups heavy whipping cream</li>
+                <li>3 tbsp powdered sugar</li>
+                <li>1 tsp vanilla extract</li>
+                <li>2 cups fresh strawberries, sliced</li>
+                <li>2 cups fresh blueberries</li>
+                <li>Fresh mint leaves, for garnish</li>
+              </ul>
+            </div>
+            <div>
+              <h4>👩‍🍳 Instructions</h4>
+              <ol>
+                <li>Whip cream, powdered sugar & vanilla to soft peaks</li>
+                <li>Add a layer of whipped cream to your glass trifle dish</li>
+                <li>Layer blueberries, then whipped cream, then strawberries</li>
+                <li>Repeat layers, arranging berries in stripes for the red/white/blue look</li>
+                <li>Chill 15 minutes, top with mint & extra berries, serve cold</li>
+              </ol>
+            </div>
+          </div>
+          <a href="https://a.co/d/09hzUndz?tag=anthonnyhome-20" class="recipe-btn" target="_blank" rel="noopener">🥣 Get the Glass Trifle Dish on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.recipe-list { max-width: 800px; margin: 0 auto; }
+.recipe-item { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 0.8rem; overflow: hidden; }
+.recipe-toggle { width: 100%; background: var(--cream); border: none; padding: 1.2rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 0.95rem; font-weight: 600; color: var(--charcoal); text-align: left; transition: background 0.2s; }
+.recipe-toggle:hover { background: var(--accent-light); }
+.recipe-toggle.active { background: var(--accent-light); color: var(--accent); }
+.recipe-icon { font-size: 1.4rem; font-weight: 300; color: var(--accent); min-width: 24px; text-align: center; transition: transform 0.3s; }
+.recipe-toggle.active .recipe-icon { transform: rotate(45deg); }
+.recipe-content { display: none; padding: 1.5rem; background: var(--warm-white); border-top: 1px solid var(--border); }
+.recipe-content.open { display: block; }
+.recipe-intro { color: var(--mid); font-size: 0.9rem; margin-bottom: 1.2rem; }
+.recipe-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+.recipe-grid h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--charcoal); }
+.recipe-grid ul, .recipe-grid ol { padding-left: 1.2rem; }
+.recipe-grid li { font-size: 0.82rem; color: var(--mid); padding: 0.2rem 0; line-height: 1.5; }
+.recipe-btn { display: block; background: var(--accent); color: var(--warm-white); padding: 0.9rem 1.2rem; border-radius: 26px; text-decoration: none; font-size: 0.85rem; font-weight: 700; text-align: center; box-shadow: 0 4px 12px rgba(193,122,59,0.3); transition: transform 0.2s ease, box-shadow 0.2s ease; margin-top: 0.5rem; }
+.recipe-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(193,122,59,0.4); }
+@media (max-width: 640px) { .recipe-grid { grid-template-columns: 1fr; } .recipe-toggle { font-size: 0.85rem; padding: 1rem; } }
+</style>
+
+<section class="guides" id="guides">
+  <div class="container">
+    <div class="section-header" style="padding-top: 2rem;">
+      <div class="heading-with-sprigs">
+        <svg class="heading-sprig" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: scaleX(-1);" aria-hidden="true">
+          <path d="M12 22 C12 16 12 10 12 4" stroke="#C17A3B" stroke-width="1.3" stroke-linecap="round"/>
+          <path d="M12 14 C7 11 5 8 7 4" stroke="#C17A3B" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <path d="M12 9 C8 7 7 5 8 2" stroke="#C17A3B" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <circle cx="12" cy="4" r="2.2" fill="#C17A3B"/>
+        </svg>
+        <h2>Buying Guides</h2>
+        <svg class="heading-sprig" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 22 C12 16 12 10 12 4" stroke="#C17A3B" stroke-width="1.3" stroke-linecap="round"/>
+          <path d="M12 14 C7 11 5 8 7 4" stroke="#C17A3B" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <path d="M12 9 C8 7 7 5 8 2" stroke="#C17A3B" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+          <circle cx="12" cy="4" r="2.2" fill="#C17A3B"/>
+        </svg>
+      </div>
+      <p>Everything you need to know before you buy</p>
+    </div>
+
+    <!-- Garden Guide — NEW, goes first -->
+    <div style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-bottom: 2rem;">
+      <div style="position: relative;">
+        <img src="garden.jpg" alt="Cozy Indoor Garden & Patio Setup" style="width:100%; height:280px; object-fit:cover;">
+        <div style="position: absolute; top: 16px; left: 16px; background: #3A6B3A; color: white; font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.9rem; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;">🌿 Garden Collection</div>
+      </div>
+      <div style="padding: 1.5rem;">
+        <p style="font-size: 0.75rem; color: #3A6B3A; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.4rem;">Indoor & Patio Garden</p>
+        <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.6rem;">Grow Your Own — Herbs, Flowers & Veggies</h3>
+        <p style="font-size: 0.88rem; color: var(--mid); line-height: 1.6; margin-bottom: 0;">Everything you need to start your own cozy cottage garden — whether it's a windowsill herb patch, a patio raised bed, or a full backyard setup. All curated in one place on Amazon.</p>
+        <button class="guide-collapse-toggle" onclick="toggleGuide(this)">
+          <span>🌱 View the 10 curated products</span>
+          <span class="guide-collapse-icon">⌄</span>
+        </button>
+        <p class="guide-swipe-hint">👉 Swipe to browse all products</p>
+        <div class="guide-products">
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🪵</span>
+            <div>
+              <p class="guide-product-name">Furinno Tioman Hardwood Potting Bench, Natural</p>
+              <p class="guide-product-price">⭐ 4.4 (1,337)</p>
+            </div>
+            <a href="https://a.co/d/0fDhSSMJ?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">💡</span>
+            <div>
+              <p class="guide-product-name">Brightown 50FT G40 Outdoor String Lights, Waterproof</p>
+              <p class="guide-product-price">$19.99 ⭐ 4.7 (4,740) — 9K+ bought last month</p>
+            </div>
+            <a href="https://a.co/d/08C5XnjK?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🧺</span>
+            <div>
+              <p class="guide-product-name">Wald Imports Small Wicker Harvest Basket with Handle</p>
+              <p class="guide-product-price">$31.00 ⭐ 4.5 (652)</p>
+            </div>
+            <a href="https://a.co/d/07Er0cpu?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🧤</span>
+            <div>
+              <p class="guide-product-name">Floral Gardening Gloves for Women, Soft Breathable</p>
+              <p class="guide-product-price">$9.99 ⭐ 4.6 (1,903) — 2K+ bought last month</p>
+            </div>
+            <a href="https://a.co/d/0e4wJ4u5?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🪣</span>
+            <div>
+              <p class="guide-product-name">Galvanized Metal Watering Can, 1 Gallon — Retro Copper</p>
+              <p class="guide-product-price">$29.99 ⭐ 4.4 (2,217)</p>
+            </div>
+            <a href="https://a.co/d/0gRosRE1?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🌿</span>
+            <div>
+              <p class="guide-product-name">5 Herb Seeds Variety Kit — Oregano, Cilantro, Parsley, Basil, Chives</p>
+              <p class="guide-product-price">$8.99 ⭐ 4.4 (3,494) — 1K+ bought last month</p>
+            </div>
+            <a href="https://a.co/d/0fKwIUEZ?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🌸</span>
+            <div>
+              <p class="guide-product-name">20 Edible Flower Seeds Variety Pack — 7000+ Non-GMO Heirloom</p>
+              <p class="guide-product-price">⭐ 4.5 (2,519)</p>
+            </div>
+            <a href="https://a.co/d/0461Jqd8?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🌱</span>
+            <div>
+              <p class="guide-product-name">Winpull 8x2x1.5ft Galvanized Steel Raised Garden Bed, 18" Tall</p>
+              <p class="guide-product-price">$64.99 ⭐ 4.7 (1,539)</p>
+            </div>
+            <a href="https://a.co/d/05xXPg1X?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🌹</span>
+            <div>
+              <p class="guide-product-name">SORANGEUN 6FT Garden Obelisk Trellis for Climbing Plants</p>
+              <p class="guide-product-price">$16.99 ⭐ 4.0 (702) — 300+ bought last month</p>
+            </div>
+            <a href="https://a.co/d/0hJ2Oe1U?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🥬</span>
+            <div>
+              <p class="guide-product-name">YKTEEDENS Raised Garden Bed with Legs & Wheels, 32" Tall</p>
+              <p class="guide-product-price">$65.99 ⭐ 4.7 (147) — Amazon's Choice</p>
+            </div>
+            <a href="https://a.co/d/0hp89KBk?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fall Season Collection -->
+    <div style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-top: 2rem;">
+      <div style="position: relative;">
+        <img src="Cozy_Fall_Kitchen.png" alt="Cozy Fall Kitchen Grandma Core" style="width:100%; height:280px; object-fit:cover;">
+        <div style="position: absolute; top: 16px; left: 16px; background: #8B3A3A; color: white; font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.9rem; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;">🍂 Fall Collection</div>
+      </div>
+      <div style="padding: 1.5rem;">
+        <p style="font-size: 0.75rem; color: #8B3A3A; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.4rem;">Fall Season Special</p>
+        <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.6rem;">Cozy Fall Grandma Core Kitchen</h3>
+        <p style="font-size: 0.88rem; color: var(--mid); line-height: 1.6; margin-bottom: 0;">Everything you need to transform your kitchen into the most beautiful cozy fall aesthetic. Ceramic cookware, vintage mugs, glass jars, fall decorations and more — all curated in one place on Amazon.</p>
+        <button class="guide-collapse-toggle" onclick="toggleGuide(this)">
+          <span>🛍️ View the 7 curated products</span>
+          <span class="guide-collapse-icon">⌄</span>
+        </button>
+        <p class="guide-swipe-hint">👉 Swipe to browse all products</p>
+        <div class="guide-products">
+
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🍳</span>
+            <div>
+              <p class="guide-product-name">Gotham Steel Hammered 15 Pc Ceramic Cookware Set</p>
+              <p class="guide-product-price">$139.99 ⭐ 4.4 (647)</p>
+            </div>
+            <a href="https://a.co/d/02dIUha0?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🎃</span>
+            <div>
+              <p class="guide-product-name">winemana Fall Mini Pumpkins Gourds & Leaves Set</p>
+              <p class="guide-product-price">$9.99 ⭐ 4.3 (6,681) — Was $14.99</p>
+            </div>
+            <a href="https://a.co/d/0aaOasvU?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🫙</span>
+            <div>
+              <p class="guide-product-name">ComSaf Set of 3 Square Glass Jars with Airtight Lids 51oz</p>
+              <p class="guide-product-price">$25.29 ⭐ 4.7 (7,485) — Amazon's Choice</p>
+            </div>
+            <a href="https://a.co/d/04mD1wVD?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+
+          <div class="guide-product-item">
+            <span class="guide-product-icon">☕</span>
+            <div>
+              <p class="guide-product-name">Pokini Ceramic Coffee Mugs Set of 4 — 14oz Reactive Glaze</p>
+              <p class="guide-product-price">$44.99 ⭐ 4.7 (125)</p>
+            </div>
+            <a href="https://a.co/d/04csItu4?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🌿</span>
+            <div>
+              <p class="guide-product-name">Green Rustic Farmhouse Ceramic Flower Pitcher Vase 8 Inch</p>
+              <p class="guide-product-price">$39.99 ⭐ 4.9 (557) — Amazon's Choice</p>
+            </div>
+            <a href="https://a.co/d/083l043u?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🍁</span>
+            <div>
+              <p class="guide-product-name">TURNMEON 24 Bundles Artificial Fall Flowers — Orange Mums & Maple Leaves</p>
+              <p class="guide-product-price">$17.99 ⭐ 4.2 (74)</p>
+            </div>
+            <a href="https://a.co/d/06iroWYW?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🕯️</span>
+            <div>
+              <p class="guide-product-name">Gold Glass Flameless Pillar Candles with Remote Set of 3</p>
+              <p class="guide-product-price">$25.99 ⭐ 4.6 (14,879) — 500+ bought last month</p>
+            </div>
+            <a href="https://a.co/d/0cXkOyh0?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Halloween Patio Table Collection -->
+    <div style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-top: 2rem;">
+      <div style="position: relative;">
+        <img src="Halloweenidea.jpg" alt="Moody Halloween Patio Dinner Table" style="width:100%; height:280px; object-fit:cover;">
+        <div style="position: absolute; top: 16px; left: 16px; background: #4A2E19; color: white; font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.9rem; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;">🎃 Halloween Special</div>
+      </div>
+      <div style="padding: 1.5rem;">
+        <p style="font-size: 0.75rem; color: #4A2E19; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.4rem;">Halloween Patio Dinner</p>
+        <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.6rem;">Moody Backyard Halloween Table Setting</h3>
+        <p style="font-size: 0.88rem; color: var(--mid); line-height: 1.6; margin-bottom: 0;">Recreate this candlelit Halloween dinner on your own patio. Burnt orange linens, rustic wood chargers, dried wheat & eucalyptus centerpieces, mini pumpkins and flickering candlelight — all curated in one place on Amazon.</p>
+        <button class="guide-collapse-toggle" onclick="toggleGuide(this)">
+          <span>🛍️ View the 11 curated products</span>
+          <span class="guide-collapse-icon">⌄</span>
+        </button>
+        <p class="guide-swipe-hint">👉 Swipe to browse all products</p>
+        <div class="guide-products">
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🧡</span>
+            <div>
+              <p class="guide-product-name">Gee Di Moda Burnt Orange Rectangle Tablecloth</p>
+              <p class="guide-product-price">$19.95 ⭐ 4.7 (48,894)</p>
+            </div>
+            <a href="https://a.co/d/0bsIK2HS?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🍽️</span>
+            <div>
+              <p class="guide-product-name">CLEENTABLE 11" Wood Appetizer Plates, Set of 4</p>
+              <p class="guide-product-price">$35.99 ⭐ 4.4 (80)</p>
+            </div>
+            <a href="https://a.co/d/09F4gD4e?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🥣</span>
+            <div>
+              <p class="guide-product-name">AmorArc Ceramic Dinnerware Set, Service for 4 (12pc)</p>
+              <p class="guide-product-price">$79.95 ⭐ 4.6 (1,634) — 300+ bought last month</p>
+            </div>
+            <a href="https://a.co/d/00DZDcEp?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🌿</span>
+            <div>
+              <p class="guide-product-name">Sukh Artificial Eucalyptus Stems, 24 Pack</p>
+              <p class="guide-product-price">$6.99 ⭐ 4.6 (564) — 200+ bought last month</p>
+            </div>
+            <a href="https://a.co/d/0c1BgYfV?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🌾</span>
+            <div>
+              <p class="guide-product-name">MHMJON Dried Wheat Stalks Bundle, 500 Pcs</p>
+              <p class="guide-product-price">$19.99 ⭐ 4.4 (1,148)</p>
+            </div>
+            <a href="https://a.co/d/0iGKfdcx?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🎃</span>
+            <div>
+              <p class="guide-product-name">Artgar 23-Pc Fall Harvest Pumpkin Decor Set</p>
+              <p class="guide-product-price">$16.99 ⭐ 4.4 (1,028)</p>
+            </div>
+            <a href="https://a.co/d/05WPUGmH?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🕯️</span>
+            <div>
+              <p class="guide-product-name">Denique Iron Taper Candle Holders, Set of 3</p>
+              <p class="guide-product-price">$36.99 ⭐ 4.8 (300) — 100+ bought last month</p>
+            </div>
+            <a href="https://a.co/d/0iUljLgi?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🪔</span>
+            <div>
+              <p class="guide-product-name">BOLSIUS Ivory Taper Candles, Pack of 30</p>
+              <p class="guide-product-price">$39.99 ⭐ 4.5 (3,143) — 600+ bought last month</p>
+            </div>
+            <a href="https://a.co/d/0bnb12LA?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🍷</span>
+            <div>
+              <p class="guide-product-name">Royalrose Hand-Blown Wine Glasses, Set of 4</p>
+              <p class="guide-product-price">$39.98 ⭐ 4.8 (34)</p>
+            </div>
+            <a href="https://a.co/d/04UrtaFe?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🧺</span>
+            <div>
+              <p class="guide-product-name">Gee Di Moda Black Cloth Napkins, Set of 12</p>
+              <p class="guide-product-price">$16.95 ⭐ 4.6 (12,839)</p>
+            </div>
+            <a href="https://a.co/d/04qxzT8a?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">👻</span>
+            <div>
+              <p class="guide-product-name">Artgar Metal Cracked Pumpkin Decor, 8 Pcs</p>
+              <p class="guide-product-price">$16.99 ⭐ 4.4 (1,028)</p>
+            </div>
+            <a href="https://a.co/d/0gMY2dyH?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4th of July Idea List — moved to last -->
+    <div style="background: var(--warm-white); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-top: 2rem;">
+      <div style="position: relative;">
+        <img src="idealist.png" alt="4th of July Grandma Core Table Setting" style="width:100%; height:280px; object-fit:cover;">
+        <div style="position: absolute; top: 16px; left: 16px; background: var(--accent); color: white; font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.9rem; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em;">✦ Featured Collection</div>
+      </div>
+      <div style="padding: 1.5rem;">
+        <p style="font-size: 0.75rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.4rem;">4th of July Special</p>
+        <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.6rem;">Grandma Core Patriotic Table Setting</h3>
+        <p style="font-size: 0.88rem; color: var(--mid); line-height: 1.6; margin-bottom: 0;">Everything you need to create the most beautiful 4th of July table setting. Blue & white vintage plates, mason jars, string lights and more — all curated in one place on Amazon.</p>
+        <button class="guide-collapse-toggle" onclick="toggleGuide(this)">
+          <span>🛍️ View the 6 curated products</span>
+          <span class="guide-collapse-icon">⌄</span>
+        </button>
+        <p class="guide-swipe-hint">👉 Swipe to browse all products</p>
+        <div class="guide-products">
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🥤</span>
+            <div>
+              <p class="guide-product-name">Hlukana Vintage Hobnail Glasses Set of 8</p>
+              <p class="guide-product-price">$23.99 ⭐ 4.9</p>
+            </div>
+            <a href="https://a.co/d/03IFxO6W?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🧺</span>
+            <div>
+              <p class="guide-product-name">EHouseHome Lace Tablecloth 60x84"</p>
+              <p class="guide-product-price">$26.99 ⭐ 4.6</p>
+            </div>
+            <a href="https://a.co/d/00B4I465?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">💡</span>
+            <div>
+              <p class="guide-product-name">Svater Outdoor String Lights 50FT</p>
+              <p class="guide-product-price">$19.98 ⭐ 4.5</p>
+            </div>
+            <a href="https://a.co/d/0hj4GZ8u?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🏺</span>
+            <div>
+              <p class="guide-product-name">Blue & White Ceramic Vase with Handle</p>
+              <p class="guide-product-price">$28.99 ⭐ 4.8</p>
+            </div>
+            <a href="https://a.co/d/0h6fsmGR?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🫙</span>
+            <div>
+              <p class="guide-product-name">Wide Mouth Mason Jars 32oz 9 Pack</p>
+              <p class="guide-product-price">$32.99 ⭐ 4.8</p>
+            </div>
+            <a href="https://a.co/d/0eteTBMk?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+          <div class="guide-product-item">
+            <span class="guide-product-icon">🍽️</span>
+            <div>
+              <p class="guide-product-name">vancasso Blue & White Ceramic Plates Set of 6</p>
+              <p class="guide-product-price">$37.39 ⭐ 4.8</p>
+            </div>
+            <a href="https://a.co/d/0d8UC9up?tag=anthonnyhome-20" class="guide-product-btn" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.guide-collapse-toggle { display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; background: var(--accent-light); color: var(--accent); border: 1.5px solid var(--accent); padding: 0.7rem 1.2rem; border-radius: 10px; font-size: 0.85rem; font-weight: 700; cursor: pointer; margin-top: 0.4rem; transition: background 0.2s, color 0.2s; }
+.guide-collapse-toggle:hover { background: var(--accent); color: #fff; }
+.guide-collapse-toggle .guide-collapse-icon { font-size: 1rem; transition: transform 0.3s; }
+.guide-collapse-toggle.active .guide-collapse-icon { transform: rotate(180deg); }
+.guide-products { display: none; margin-top: 1.2rem; }
+.guide-products.open { display: flex; flex-direction: row; gap: 0.9rem; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 0.2rem 0.2rem 0.9rem; scrollbar-width: thin; scrollbar-color: var(--accent) var(--cream); }
+.guide-products.open::-webkit-scrollbar { height: 6px; }
+.guide-products.open::-webkit-scrollbar-track { background: var(--cream); border-radius: 10px; }
+.guide-products.open::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+.guide-swipe-hint { font-size: 0.75rem; color: var(--mid); text-align: center; margin-top: 0.6rem; letter-spacing: 0.02em; display: none; }
+.guide-collapse-toggle.active + .guide-swipe-hint { display: block; }
+.guide-product-item { flex: 0 0 auto; width: 150px; scroll-snap-align: start; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.4rem; padding: 1.1rem 0.9rem; background: var(--cream); border-radius: 14px; border: 1px solid var(--border); }
+.guide-product-icon { font-size: 2.1rem; min-width: unset; }
+.guide-product-item div { flex: unset; width: 100%; }
+.guide-product-name { font-size: 0.8rem; font-weight: 600; color: var(--charcoal); line-height: 1.3; min-height: 2.6em; }
+.guide-product-price { font-size: 0.75rem; color: var(--mid); margin-top: 2px; margin-bottom: 0.3rem; }
+.guide-product-btn { background: var(--accent); color: white; padding: 0.5rem 1rem; border-radius: 18px; font-size: 0.75rem; font-weight: 700; text-decoration: none; white-space: nowrap; box-shadow: 0 2px 8px rgba(193,122,59,0.28); transition: transform 0.2s ease, box-shadow 0.2s ease; display: inline-block; width: 100%; text-align: center; box-sizing: border-box; }
+.guide-product-btn:hover { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(193,122,59,0.38); }
+</style>
+
+<div style="background: var(--cream);">
+  <div class="container">
+    <div class="grandma-divider" aria-hidden="true">
+      <svg width="140" height="28" viewBox="0 0 140 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="14" x2="52" y2="14" stroke="#E8E3DC" stroke-width="1"/>
+        <line x1="88" y1="14" x2="140" y2="14" stroke="#E8E3DC" stroke-width="1"/>
+        <g stroke="#C17A3B" stroke-width="1.3" fill="none" stroke-linecap="round">
+          <path d="M70 26 C70 20 70 14 70 8"/>
+          <path d="M70 18 C64 15 60 11 62 6"/>
+          <path d="M70 18 C76 15 80 11 78 6"/>
+          <path d="M70 12 C66 10 64 7 66 4"/>
+          <path d="M70 12 C74 10 76 7 74 4"/>
+          <circle cx="70" cy="6" r="3" fill="#C17A3B" stroke="none"/>
+        </g>
+      </svg>
+    </div>
+
+    <section class="newsletter">
+      <div class="newsletter-box">
+        <h2>Deals before everyone else</h2>
+        <p>Get price drop alerts, exclusive discounts and our weekly picks delivered to your inbox.</p>
+        <div class="email-row">
+          <input type="email" placeholder="your@email.com">
+          <button type="button">Subscribe</button>
+        </div>
+        <p style="font-size: 0.72rem; color: var(--light); margin-top: 0.8rem;">No spam. Unsubscribe anytime.</p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<section id="blog" style="background: var(--cream); border-top: 1px solid var(--border); padding: 3rem 0 4rem;">
+  <div class="container">
+    <div class="section-header" style="padding-top: 0.5rem;">
+      <h2>From the Blog</h2>
+      <p>Ideas, guides and inspiration for a more intentional home</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; margin-top: 1.5rem;">
+      <a href="blog-indoor-garden.html" style="text-decoration: none; color: inherit; background: var(--warm-white); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; display: block; transition: transform 0.2s, box-shadow 0.2s;">
+        <span style="font-size: 1.5rem; display: block; margin-bottom: 0.6rem;">🌱</span>
+        <p style="font-size: 0.72rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.3rem;">Garden & Home</p>
+        <h3 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Why Every Home Needs a Garden — Indoors or Out</h3>
+        <p style="font-size: 0.82rem; color: var(--mid);">Growing your own herbs and vegetables is easier than you think — and the benefits go far beyond fresh basil on your pasta.</p>
+      </a>
+      <a href="blog-grandma-core-guide.html" style="text-decoration: none; color: inherit; background: var(--warm-white); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; display: block; transition: transform 0.2s, box-shadow 0.2s;">
+        <span style="font-size: 1.5rem; display: block; margin-bottom: 0.6rem;">🏡</span>
+        <p style="font-size: 0.72rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.3rem;">Home Aesthetic</p>
+        <h3 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">The Beginner's Guide to Grandma Core Aesthetic</h3>
+        <p style="font-size: 0.82rem; color: var(--mid);">What exactly is Grandma Core, why is everyone talking about it, and how do you bring it into your home?</p>
+      </a>
+      <a href="blog-grandma-core-trend.html" style="text-decoration: none; color: inherit; background: var(--warm-white); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; display: block; transition: transform 0.2s, box-shadow 0.2s;">
+        <span style="font-size: 1.5rem; display: block; margin-bottom: 0.6rem;">✨</span>
+        <p style="font-size: 0.72rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.3rem;">Trends & Culture</p>
+        <h3 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Why Grandma Core Will Be the Biggest Trend — And How to Get Ahead</h3>
+        <p style="font-size: 0.82rem; color: var(--mid);">The cultural forces driving Grandma Core are deep and long-lasting. Those who embrace it early are already ahead.</p>
+      </a>
+      <a href="blog-cast-iron.html" style="text-decoration: none; color: inherit; background: var(--warm-white); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; display: block; transition: transform 0.2s, box-shadow 0.2s;">
+        <span style="font-size: 1.5rem; display: block; margin-bottom: 0.6rem;">🍳</span>
+        <p style="font-size: 0.72rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.3rem;">Cookware & Kitchen</p>
+        <h3 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Why Cast Iron Is the Only Pan You'll Ever Need</h3>
+        <p style="font-size: 0.82rem; color: var(--mid);">One good cast iron skillet might be the last pan you ever buy. Here is why it outperforms everything else.</p>
+      </a>
+      <a href="blog-fall-dinner.html" style="text-decoration: none; color: inherit; background: var(--warm-white); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; display: block; transition: transform 0.2s, box-shadow 0.2s;">
+        <span style="font-size: 1.5rem; display: block; margin-bottom: 0.6rem;">🍂</span>
+        <p style="font-size: 0.72rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.3rem;">Fall Entertaining</p>
+        <h3 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">How to Host a Cozy Fall Dinner at Home</h3>
+        <p style="font-size: 0.82rem; color: var(--mid);">A warm, unhurried fall dinner does not require a perfect home. Here is how to create an evening people remember.</p>
+      </a>
+      <a href="blog-gothic-kitchen.html" style="text-decoration: none; color: inherit; background: var(--warm-white); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem; display: block; transition: transform 0.2s, box-shadow 0.2s;">
+        <span style="font-size: 1.5rem; display: block; margin-bottom: 0.6rem;">🎃</span>
+        <p style="font-size: 0.72rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.3rem;">Halloween & Gothic</p>
+        <h3 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; line-height: 1.3;">Gothic Elegance: Transform Your Kitchen for Halloween</h3>
+        <p style="font-size: 0.82rem; color: var(--mid);">Halloween decor does not have to be plastic and loud. How to create a genuinely moody, sophisticated kitchen.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="home-kitchen-picks.html">Home</a><a href="#products">Products</a><a href="#guides">Guides</a>
+    <a href="about.html">About</a><a href="privacy-policy.html">Privacy policy</a><a href="contact.html">Contact</a>
+  </div>
+  <p>© 2025 HomeEssentials. All rights reserved.</p>
+  <p class="disclaimer">HomeEssentials is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases.</p>
+</footer>
+
+<script>
+  function goToProduct(id) {
+    const target = document.getElementById(id);
+    if (!target) return;
+    if (history.replaceState) { history.replaceState(null, '', '#' + id); }
+    target.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'start' });
+    document.querySelectorAll('.product-card.product-highlight').forEach(c => c.classList.remove('product-highlight'));
+    target.classList.add('product-highlight');
+    setTimeout(() => target.classList.remove('product-highlight'), 1400);
+  }
+  window.goToProduct = goToProduct;
+
+  // If the page loads directly with a product hash (e.g. from Pinterest), jump to it
+  window.addEventListener('load', () => {
+    const hash = window.location.hash ? window.location.hash.slice(1) : '';
+    if (hash) {
+      const target = document.getElementById(hash);
+      if (target && target.classList.contains('product-card')) {
+        setTimeout(() => goToProduct(hash), 300);
+      }
+    }
+  });
+
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const categoryMap = {
+    'All': null,
+    'Air Fryer': ['airfryer'],
+    'Instant Pot': ['instantpot'],
+    'Baking': ['bakingmat'],
+    'Tools': ['chopper', 'scale', 'thermometer'],
+    'Cookware': ['skillet']
+  };
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const label = btn.textContent.trim();
+      if (label === 'All') {
+        document.querySelector('.product-grid').scrollTo({ left: 0, behavior: 'smooth' });
+        return;
+      }
+      const ids = categoryMap[label];
+      if (ids) goToProduct(ids[0]);
+    });
+  });
+
+  document.querySelectorAll('.category-card').forEach(link => {
+    const href = link.getAttribute('href') || '';
+    if (href.startsWith('#')) {
+      const id = href.slice(1);
+      const target = document.getElementById(id);
+      if (target && target.classList.contains('product-card')) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          goToProduct(id);
+        });
+      }
+    }
+  });
+
+  function toggleRecipe(btn) {
+    const content = btn.nextElementSibling;
+    const isOpen = content.classList.contains('open');
+    document.querySelectorAll('.recipe-content').forEach(c => c.classList.remove('open'));
+    document.querySelectorAll('.recipe-toggle').forEach(b => b.classList.remove('active'));
+    if (!isOpen) {
+      content.classList.add('open');
+      btn.classList.add('active');
+    }
+  }
+  window.toggleRecipe = toggleRecipe;
+
+  function toggleCategory(btn) {
+    let content = btn.nextElementSibling;
+    while (content && !content.classList.contains('category-collapse')) {
+      content = content.nextElementSibling;
+    }
+    content.classList.toggle('open');
+    btn.classList.toggle('active');
+  }
+  window.toggleCategory = toggleCategory;
+
+  document.querySelectorAll('.category-main-btn').forEach(link => {
+    const href = link.getAttribute('href') || '';
+    if (href.startsWith('#')) {
+      const id = href.slice(1);
+      const section = document.getElementById(id);
+      if (section) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const toggle = section.querySelector('.category-toggle');
+          const collapse = section.querySelector('.category-collapse');
+          if (toggle && collapse && !collapse.classList.contains('open')) {
+            collapse.classList.add('open');
+            toggle.classList.add('active');
+          }
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+    }
+  });
+
+  function toggleGuide(btn) {
+    let content = btn.nextElementSibling;
+    while (content && !content.classList.contains('guide-products')) {
+      content = content.nextElementSibling;
+    }
+    content.classList.toggle('open');
+    btn.classList.toggle('active');
+  }
+  window.toggleGuide = toggleGuide;
+</script>
+</body>
+</html>
